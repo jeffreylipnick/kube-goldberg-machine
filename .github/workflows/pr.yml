@@ -1,0 +1,12 @@
+name: test-github-actions
+on:
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      - main
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo 'it worked!'
